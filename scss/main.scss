@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: hsl(235, 16%, 14%);
+  background-image: url("../images/bg-stars.svg"), url("../images/pattern-hills.svg");
+  background-repeat: no-repeat;
+  background-position: center top, center bottom;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 22px;
+  letter-spacing: 7.5px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.timer__wrapper {
+  margin-top: 104px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .timer__item {
+    margin: 0 32px;
+    .timer__item-digit {
+      border-radius: 8px;
+      width: 148px;
+      height: 150px;
+      background-color: hsl(236, 21%, 26%);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      &:before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-color: #191a23;
+        transform: translate(-50%, -50%);
+      }
+      &:after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background-color: #191a23;
+        transform: translate(50%, -50%);
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, 0.15);
+        &:after {
+          content: "";
+          width: 100%;
+          height: 2 px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.25);
+        }
+      }
+      p {
+        margin: 0;
+        color: hsl(345, 95%, 68%);
+        font-size: 80px;
+        letter-spacing: -2.4px;
+        line-height: 150px;
+      }
+    }
+    p {
+      margin-top: 16px;
+      color: #8385a9;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+.social {
+  margin: 152px auto 0;
+  max-width: 136px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    a:hover > svg > path {
+      fill: hsl(345, 95%, 68%);
+    }
+  }
+}
